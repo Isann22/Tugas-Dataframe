@@ -1,9 +1,10 @@
 import pandas as pd
 
+#soal 1
 df_dataJabar = pd.read_csv('jumlah_produksi_sampah.csv')
 df_dataJabar
 
-#soal 1
+#soal 2
 sampah_2020 = 0
 for index,row in df_dataJabar.iterrows():
   if(row['tahun']==2020):
@@ -15,7 +16,7 @@ df_datasampah2020.to_csv('data sampah 2020.csv',index=False)
 df_datasampah2020.to_excel('data sampah 2020.xlsx',index=False)
 print(df_datasampah2020)
 
-#soal 2
+#soal 3
 sampah_pertahun = {}
 for index,row in df_dataJabar.iterrows():
   tahun = row['tahun']
@@ -31,7 +32,7 @@ df_sampah_pertahun.to_excel('sampah pertahun.xlsx',index=False)
 
 print(df_sampah_pertahun)
 
-#soal 3
+#soal 4
 sampah_kabupaten = {}
 
 for index,row in df_dataJabar.iterrows():
